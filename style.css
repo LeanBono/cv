@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+body{
+    background: #000000 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid ;
+    grid-template-columns: 1fr 2fr;
+}
+
+.container .left_Side{
+    position:relative;
+    background: #e4d617;
+    padding: 40px;
+}
+
+.perfil_Texto{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #000000; 
+}
+
+.perfil_Texto .imagen_Container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.perfil_Texto .imagen_Container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.perfil_Texto h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.perfil_Texto h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactoInfo{
+    padding-top: 40px;
+}
+.Titulo{
+    color: #000000;
+    text-transform: uppercase ;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactoInfo ul{
+    position: relative;
+}
+
+.contactoInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactoInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.contactoInfo ul li span{
+    color: #3f3e3e;
+    font-weight: 300;
+}
+
+.contactoInfo.educacion .li{
+     margin-bottom: 20px;
+}
+
+.contactoInfo.educacion h5{
+    color: #000000;
+    font-weight: 500;
+}
+
+.contactoInfo.educacion h4:nth-child(2){
+    color: #3f3e3e;
+    font-weight: 500;
+}
+
+.contactoInfo.educacion h4{
+    color: #3f3e3e;
+    font-weight: 300;
+}
+
+.contactoInfo.lenguajes .estadistica{
+    position:relative;
+    width: 100%;
+    height:6px;
+    background: #000000;
+    display: block;
+    margin-top: 5px;
+    border: 2px solid #000000;
+}
+.contactoInfo.lenguajes .estadistica div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #e6e644;
+}
+.container .right_Side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.acerca{
+    margin-bottom: 50px;
+}
+
+.acerca:last-child{
+    margin-bottom: 0;
+}
+
+.Titulo2{
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #3f3e3e;
+}
+
+.acerca.experiencia .caja{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+}
+
+.acerca.experiencia .caja .años_DeEmpresa{
+    min-width: 150px;
+}
+
+.acerca.experiencia .caja .años_DeEmpresa h5{
+    text-transform: uppercase;
+    color: #3f3e3e;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.acerca.experiencia .caja .texto h4{
+    text-transform: uppercase;
+    color: #e4d617;
+    font-size: 16px;
+}
+
+.acerca.habilidades .caja{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.acerca.habilidades .caja h4{
+    text-transform:uppercase ;
+    color: #3f3e3e;
+    font-weight: 500;
+}
+
+.acerca.habilidades .caja .estadistica{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #000000;
+}
+
+.acerca.habilidades .caja .estadistica div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #faeb1a;
+}
+.botones{
+    position: absolute;
+    top: 10px;
+}
+
+@media (max-width: 1000px){
+    .container{
+        margin:10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+    .acerca .caja{
+        flex-direction: column;
+    }
+
+    .acerca .caja .años_DeEmpresa{
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+}
